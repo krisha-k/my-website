@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+        }
+        .subpage {
+            max-width: 400px;
+            padding: 50px;
+            border: 2px solid #ccc;
+            text-align: justify;
+            font-size: 20px;
+            background-color: white;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: GreenYellow;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginPage" class="subpage">
+        <h1>Login</h1>
+        <form id="loginForm" action="/login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+        <a href="{{ url_for('signup') }}">Sign Up</a>
+        <a href="{{ url_for('forgot_password') }}">Forgot Password</a>
+    </div>
+</body>
+</html>

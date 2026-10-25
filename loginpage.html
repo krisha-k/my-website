@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+    }
+    button {
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: GreenYellow;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Welcome</h1>
+  <button onclick="showCustomerDetails()">Login</button>
+</div>
+
+<script>
+  function showCustomerDetails() {
+    window.location.href = "customerdetails.html";
+  }
+</script>
+
+</body>
+</html>

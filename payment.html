@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Method</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+    }
+    button {
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: GreenYellow;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Payment Method</h2>
+  <form action="{{ url_for('payment' )}}" method="POST">
+    <label for="paymentMethod">Select Payment Method:</label>
+    <select id="paymentMethod" name="paymentMethod" required>
+        <option value="phonepay">PhonePay</option>
+        <option value="gpay">GPay</option>
+        <option value="cashOnDelivery">Cash on Delivery</option>
+    </select><br>
+    <button type="submit">Next</button>
+</form>
+</div>
+
+</body>
+</html>

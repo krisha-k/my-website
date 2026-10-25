@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receiver Details</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      margin: 0;
+    }
+    .subpage {
+      max-width: 400px;
+      padding: 50px;
+      border: 2px solid #ccc;
+      text-align: justify;
+      font-size: 30px;
+      background-color: white;
+    }
+button {
+      font-size: 20px;
+      padding: 10px;
+      margin-top: 10px;
+      text-align: center;
+      background-color: GreenYellow;
+    }
+label {
+      display: block;
+      margin-top: 10px;
+    }
+        .hidden {
+        display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Receiver Details</h2>
+  <form action="{{ url_for('receiver') }}" method="POST">
+    <label for="receiverName">Name:</label>
+    <input type="text" id="receiverName" name="receiverName" required><br>
+
+    <label for="receiverPhoneNumber">Phone Number:</label>
+    <input type="tel" id="receiverPhoneNumber" name="receiverPhoneNumber" required><br>
+
+    <label for="receiverAddress">Address:</label>
+    <textarea id="receiverAddress" name="receiverAddress" required></textarea><br>
+
+    <button type="submit">Next</button>
+  </form>
+</div>
+
+</body>
+</html>

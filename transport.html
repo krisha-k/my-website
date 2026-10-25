@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transport Mode</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+    }
+    button {
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: GreenYellow;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Transport Mode</h2>
+  <form action="{{ url_for('transport') }}" method="POST">
+    <label for="transportMode">Select Transport Mode:</label>
+    <select id="transportMode" name="transportMode" required>
+        <option value="cycle">Cycle</option>
+        <option value="bike">Bike</option>
+        <option value="auto">Auto</option>
+        <option value="truck">Truck</option>
+    </select><br>
+    <button type="submit">Next</button>
+</form>
+</div>
+
+</body>
+</html>
